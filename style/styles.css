@@ -1,0 +1,27 @@
+li{
+    list-style-type: none;
+}
+header{
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+}
+.accordion-content{
+    font-size: 18px;
+    display: none;
+    margin-top: 8px;
+    margin-bottom: 5px;
+}
+.accordion-control{
+    width: 100%;
+    height: 40px;    
+    background-color: rgba(114, 219, 245, 0.514);
+    font-size: 20px; 
+    cursor: pointer;
+          
+}
+#main{    
+    width: 50vw;
+    height: 30vw;  
+}
+
