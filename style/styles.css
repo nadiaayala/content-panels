@@ -22,6 +22,15 @@ header{
 }
 #main{    
     width: 50vw;
-    height: 30vw;  
+    height: auto;
 }
 
+ul.tabbed li{
+    display: inline;
+}
+.tab-panel{
+    display: none;
+}
+.tab-panel.active{
+    display: block;
+}
