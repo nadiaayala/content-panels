@@ -7,7 +7,7 @@ $(function(){
         e.preventDefault();
         $(this).next('.accordion-content').not(':animated').slideToggle();
         });
-        
+
     
 //   Code for the tabbed panel
     $('.tabbed').each(function(){                   
@@ -29,4 +29,19 @@ $(function(){
             $tab = $link.parent().addClass('active'); 
            }
         })});
+        
+
+//   Code for the photo viewer
+    var $photoViewer = $('#photo-viewer');
+    var $imgHolder = $('.img-holder');
+    var $thumbnails = $('.thumbnails');
+    
+    $thumbnails.on('click', '.thumb', function(){
+        var $src = $(this).attr('src');
+        console.log($src);
+        var $showing = $('.showing');
+        $showing.attr('src', $src);
+        
+    })
+
     });
