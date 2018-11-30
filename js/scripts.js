@@ -7,6 +7,7 @@ $(function(){
         e.preventDefault();
         $(this).next('.accordion-content').not(':animated').slideToggle();
         });
+        
     
 //   Code for the tabbed panel
     $('.tabbed').each(function(){                   
@@ -17,19 +18,15 @@ $(function(){
       
         $this.on('click', '.tab-control', function(e) { 
           e.preventDefault();   
-                               
-          var $link = $(this);
-          var $selected = $('.selected:first');
-          $selected.removeClass('selected');
+          $link.removeClass('selected');
+          $link = $(this); // tab controller .tab-control clicked
           $link.addClass('selected');                      
-              id = this.hash;                          
-      
-          if (id && !$link.is('.active')) {             
-            $panel.removeClass('active');               
+              var id = this.hash;                          
+           if (!$link.is('.active')) {             
+            $panel.removeClass('active');    
             $tab.removeClass('active');                
-      
-            $panel = $(id).addClass('active');          
-            $tab = $link.parent().addClass('active');  
-          }
+            $panel = $(id).addClass('active'); 
+            $tab = $link.parent().addClass('active'); 
+           }
         })});
     });
