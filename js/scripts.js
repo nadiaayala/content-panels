@@ -16,8 +16,12 @@ $(function(){
         var $panel = $($link.attr('href'));             // Get active panel using the href atribute of the link inside the current active li
       
         $this.on('click', '.tab-control', function(e) { 
-          e.preventDefault();                           
-          var $link = $(this),                        
+          e.preventDefault();   
+                               
+          var $link = $(this);
+          var $selected = $('.selected:first');
+          $selected.removeClass('selected');
+          $link.addClass('selected');                      
               id = this.hash;                          
       
           if (id && !$link.is('.active')) {             

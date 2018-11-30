@@ -25,12 +25,28 @@ header{
     height: auto;
 }
 
-ul.tabbed li{
+.selected{
+    background-color: rgba(128, 128, 128, 0.726);
+}
+#tab-sample{
+    width: 50vw;   
+}
+#tab-sample a{
+    text-decoration-line: none;
+    font-size: 20px;
+}
+ul.tabbed li {
     display: inline;
+}
+.tabbed{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 .tab-panel{
     display: none;
 }
 .tab-panel.active{
     display: block;
+    background-color: rgba(128, 128, 128, 0.726);
 }
